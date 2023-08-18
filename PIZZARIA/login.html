@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@rive-app/canvas@2.1.0"></script>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <section class="formulario">
+        <form>
+            <label for="email">E-mail</label>
+            <input id="email" type="email">
+            <label for="password">Senha</label>
+            <input id="senha" type="password">
+            <button onclick="verificaLogin()">Entrar</button>
+        </form>
+        
+    </section>
+    <canvas id="canvas" width="300" height="300"><script>
+        const r = new rive.Rive({
+            src: "./images/pizza.riv",
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            stateMachines: "Animation 1",
+            onLoad: () => {
+              r.resizeDrawingSurfaceToCanvas();
+            },
+        });
+    </script></canvas>
+    <script src="./js/login.js"></script>
+    
+</body>
+</html>
